@@ -99,4 +99,12 @@ class ValidadorCpfApplicationTests {
 		assertEquals(false, cliente.validarCPF());
 	}
 
+	@Test
+	void fazendoTestePassarCPFTodoZeros() {
+		Cliente cliente = new Cliente();
+		cliente.setNome("Danilo");
+		cliente.setCpf("000.000.000-00");
+		assertEquals(false, cliente.validarCPF());
+	}
+
 }
